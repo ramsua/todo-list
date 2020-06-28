@@ -1,0 +1,12 @@
+.msg{
+    margin: 0;
+    padding: calc(var(--gap) * 2);
+    text-transform: uppercase;
+    text-align: center;
+}
+.scaled{
+    transition: transform .075s ease;
+}
+.scale-down {
+    transform: scale(.985);
+}

@@ -127,7 +127,7 @@ gulp.task("images-production", () => {
 // Development
 gulp.task("images-dev", () => {
     return gulp
-        .src("src/assets/images/**/*")
+        .src("src/assets/images/*")
         .pipe(plumber())
         .pipe(gulp.dest("public/assets/images"))
 })
@@ -152,5 +152,5 @@ gulp.task('dev', () => {
     gulp.watch('./src/*.html', gulp.series('html-dev')).on('change', reload)
     gulp.watch('./src/css/*.css', gulp.series('css-dev'))
     gulp.watch('./src/js/*.js', gulp.series('scripts-dev')).on('change', reload)
-    gulp.watch('./src/images/**/*', gulp.series('images-dev'))
+    gulp.watch('./src/assets/images/*', gulp.series('images-dev'))
 })

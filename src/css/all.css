@@ -1,0 +1,27 @@
+/* Variables */
+:root {
+    --main-color: rgb(135, 206, 250);
+
+    --red: rgb(255, 0, 0);
+    --green: rgb(0, 255, 0);
+    --yelloy: rgb(255, 215, 0);
+
+    --call-to-action: rgb(48, 79, 254);
+
+    --gap: .5em;
+}
+
+/* Reset */
+*,*::after,*::before { box-sizing: border-box; }
+
+body{
+    margin: 0;
+    font-family: sans-serif;
+}
+ul {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+    
+    list-style: none;
+}

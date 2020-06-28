@@ -1,0 +1,25 @@
+.colors{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: var(--gap);
+    background-color: #fff;
+}
+.color{
+    margin-top: var(--gap);
+    margin-bottom: var(--gap);
+    cursor: pointer;
+}
+.color input{
+    display: none;
+}
+.red{
+    margin-left: var(--gap);
+    background-color: var(--red);
+}
+.yellow{
+    background-color: var(--yelloy);
+}
+.green{
+    margin-right: var(--gap);
+    background-color: var(--green);
+}

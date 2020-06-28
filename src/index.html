@@ -9,9 +9,52 @@
     </head>
     <body>
         <header class="main-header">
-            <h1 class="title">Dinámica de prácticas para Github</h1>
-            <p>Profesor: Dorian Desings</p>
+            <h1 class="title">Dinámica de prácticas para portfolio de GitHub</h1>
+            <h2 class="title">Todo List</h2>
         </header>
+        <main class="main-content">
+            <form class="form-task" id="formTask">
+                <fieldset class="form-task__fieldset">
+                    <input type="text" name="inputTask" placeholder="Agrega una tarea" class="form-task__input">
+                </fieldset>
+                <div class="form-task__fieldset colors">
+                    <label class="color red">
+                        <input type="radio" name="color" id="red">
+                    </label>
+                    <label class="color yellow">
+                        <input type="radio" name="color" id="yellow">
+                    </label>
+                    <label class="color green">
+                        <input type="radio" name="color" id="green">
+                    </label>
+                </div>
+                <fieldset class="form-task__fieldset">
+                    <input class="form-task__date" type="date" name="inputDate">
+                </fieldset>
+                <fieldset class="form-task__fieldset">
+                    <button id="button" class="button button--bg-main-color scaled">Agregar</button>
+                </fieldset>
+            </form>
+            <p id="msg" class="msg">Tareas</p>
+            <ul class="tasks">
+                <li class="tasks__task">
+                    <div class="field">
+                        <label class="label">
+                            <input type="checkbox">
+                        </label>
+                        <p>Tarea agregada</p>
+                    </div>
+                    <div class="field">
+                        <p>Agregada el: 20/10/2020 a las 22:23</p>
+                        <p>Quedan: 10d 21h 30m 40s</p>
+                    </div>
+                    <button class="button">Delete</button>
+                </li>
+            </ul>
+        </main>
+        <!-- <footer class="main-footer">
+            <p>Profesor: Dorian Desings</p>
+        </footer> -->
         <script src="./js/scripts.min.js"></script>
     </body>
 </html>
