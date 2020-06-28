@@ -1,21 +1,21 @@
 {
-	"name": "plantilla-base",
+	"name": "todo-list",
 	"version": "1.0.0",
-	"description": "plantilla básica para transpilar HTML, CSS y JavaScript usando Gulp 4",
+	"description": "App de tareas",
 	"main": "src/index.html",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/ramsua/plantilla-base.git"
+		"url": "git+https://github.com/ramsua/todo-list.git"
 	},
 	"author": "RAMSUA",
 	"license": "ISC",
 	"bugs": {
-		"url": "https://github.com/ramsua/plantilla-base/issues"
+		"url": "https://github.com/ramsua/todo-list/issues"
 	},
-	"homepage": "https://github.com/ramsua/plantilla-base#readme",
+	"homepage": "https://github.com/ramsua/todo-list#readme",
 	"browserslist": [
 		"defaults",
 		"not IE 11",
@@ -38,5 +38,6 @@
 		"gulp-plumber": "^1.2.1",
 		"gulp-postcss": "^8.0.0",
 		"gulp-terser": "^1.2.0"
-	}
+	},
+	"dependencies": {}
 }
