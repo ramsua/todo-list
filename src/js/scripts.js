@@ -1,27 +1,28 @@
 const formTask = document.getElementById('formTask');
 const msg = document.getElementById('msg');
 
-const colors = {
-    red: formTask.red,
-    yellow: formTask.yellow,
-    green: formTask.green
-}
-
 formTask.addEventListener('submit', (e) => {
 
     e.preventDefault()
 
     const task = formTask.inputTask.value.trim()
 
-    const date = formTask.inputDate
+    const date = formTask.inputDate.value
 
     if (validateColor()) {
-        console.log('Hay un color seleccionado');
+        assignBgColor(msg, value.id)
     } else {
         console.log('Elige un color');
     }
 
 })
+
+const colors = {
+    red: formTask.red,
+    yellow: formTask.yellow,
+    green: formTask.green
+}
+
 // Funciones
 const validateColor = () => {
     for (const color in colors) {
@@ -34,11 +35,12 @@ const validateColor = () => {
     }
     return false
 }
-
-const assignBgColor = () => {
-
+const assignBgColor = (elem, color) => {
+    if (elem) {
+        elem.classList.remove('red', 'yellow', 'green')
+        elem.classList.add(color)
+    }
 }
-
 // Utilidades
 
 button.addEventListener('mousedown', () => {
