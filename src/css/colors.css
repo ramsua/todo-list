@@ -8,18 +8,30 @@
     margin-top: var(--gap);
     margin-bottom: var(--gap);
     cursor: pointer;
+    outline: 2px solid transparent;
+    transition: outline-color .15s ease;
+
+}
+.color:hover{
+    outline-color: blue;
+} 
+
+label.red{
+    margin-left: var(--gap);
+}
+label.green{
+    margin-right: var(--gap);
 }
 .color input{
     display: none;
 }
+
 .red{
-    margin-left: var(--gap);
     background-color: var(--red);
 }
 .yellow{
     background-color: var(--yelloy);
 }
 .green{
-    margin-right: var(--gap);
     background-color: var(--green);
 }

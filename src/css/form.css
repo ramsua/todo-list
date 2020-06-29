@@ -1,10 +1,10 @@
 .form-task{
     display: grid;
-    grid-template-columns: repeat(4,1fr);
-    grid-template-rows: repeat(2,1fr);
+    grid-template-columns: repeat(6,1fr);
+    grid-template-rows: 50px 1fr;
     gap: var(--gap);
 
-    max-width: 450px;
+    max-width: var(--max-width);
 
     margin-right: auto;
     margin-left: auto;
@@ -16,42 +16,44 @@
     margin: 0;
     padding: 0;
 
+    background-color: #fff;
+
     border: none;
 }
 .form-task__fieldset:first-child,
 .form-task__fieldset:last-child{
-    grid-column: 1 / 5;
+    grid-column: 1 / 7;
 }
 .form-task__fieldset:nth-child(2){
     grid-column: 1 / 3;
 }
 .form-task__fieldset:nth-child(3){
-    grid-column: 3 / 5;
+    grid-column: 3 / 7;
+    display: flex;
 }
 .form-task__fieldset:last-child{
     padding: var(--gap);
-    background-color: #fff;
 }
+
 .form-task__input{
     padding-left: var(--gap);
-}
-.form-task__input{
     width: 100%;
     height: 100%;
-
-    background-color: #fff;
     
     font-size: 100%;
     border: 1px solid var(--main-color);
 }
 .form-task__date{
+    flex: 1 0 auto;
     margin: 0;
     padding: var(--gap);
-    width: 100%;
 
     font-size: 140%;
     text-align: center;
     text-transform: uppercase;
     
     outline: none;
+}
+.form-task .button{
+    width: 100%;
 }

@@ -9,15 +9,19 @@
     </head>
     <body>
         <header class="main-header">
-            <h1 class="title">Dinámica de prácticas para portfolio de GitHub</h1>
-            <h2 class="title">Todo List</h2>
+            <h1 class="title">Todo List</h1>
         </header>
         <main class="main-content">
+            <!-- La etiqueta FIELDSET
+               da problemas al momento de ordenar elementos con CSS,
+               por eso se usa en éste caso específico un DIV
+            -->
             <form class="form-task" id="formTask">
-                <fieldset class="form-task__fieldset">
+                <div class="form-task__fieldset">
                     <input type="text" name="inputTask" placeholder="Agrega una tarea" class="form-task__input">
-                </fieldset>
+                </div>
                 <div class="form-task__fieldset colors">
+                    
                     <label class="color red">
                         <input type="radio" name="color" id="red">
                     </label>
@@ -28,27 +32,66 @@
                         <input type="radio" name="color" id="green">
                     </label>
                 </div>
-                <fieldset class="form-task__fieldset">
-                    <input class="form-task__date" type="date" name="inputDate">
-                </fieldset>
-                <fieldset class="form-task__fieldset">
-                    <button id="button" class="button button--bg-main-color scaled">Agregar</button>
-                </fieldset>
+                <div class="form-task__fieldset">
+                    <input class="form-task__date" type="datetime-local" name="inputDate">
+                    <!-- <input class="form-task__date" type="time" name="inputTime"> -->
+                </div>
+                <div class="form-task__fieldset">
+                    <button 
+                        id="button" 
+                        class="button 
+                        button--bg-main-color
+                        scaled">
+                        Agregar
+                    </button>
+                </div>
             </form>
-            <p id="msg" class="msg">Tareas</p>
+            <h2 id="msg" class="msg">Tareas</h2>
             <ul class="tasks">
-                <li class="tasks__task">
-                    <div class="field">
-                        <label class="label">
-                            <input type="checkbox">
-                        </label>
-                        <p>Tarea agregada</p>
+                <li class="tasks__task green">
+                    <div class="tasks__field">
+                        <p class="tasks__task-name">Tarea agregada</p>
+                        <button class="button tasks__delete-task">
+                            <img src="./assets/images/borrar.svg" alt="">
+                        </button>
                     </div>
-                    <div class="field">
-                        <p>Agregada el: 20/10/2020 a las 22:23</p>
-                        <p>Quedan: 10d 21h 30m 40s</p>
+                    <div class="tasks__field">
+                        <p class="tasks__current-day" id="currentDay">Agregada el: 20/10/2020 a las 22:23</p>
+                        <p class="tasks__deadline" id="deadline">Quedan: 10d 21h 30m 40s</p>
+                        <button class="button tasks__completed-task">
+                            <img src="./assets/images/comprobado.svg" alt="">
+                        </button>
                     </div>
-                    <button class="button">Delete</button>
+                </li>
+                <li class="tasks__task red">
+                    <div class="tasks__field">
+                        <p class="tasks__task-name">Tarea agregada</p>
+                        <button class="button tasks__delete-task">
+                            <img src="./assets/images/borrar.svg" alt="">
+                        </button>
+                    </div>
+                    <div class="tasks__field">
+                        <p class="tasks__current-day" id="currentDay">Agregada el: 20/10/2020 a las 22:23</p>
+                        <p class="tasks__deadline" id="deadline">Quedan: 10d 21h 30m 40s</p>
+                        <button class="button tasks__completed-task">
+                            <img src="./assets/images/comprobado.svg" alt="">
+                        </button>
+                    </div>
+                </li>
+                <li class="tasks__task yellow">
+                    <div class="tasks__field">
+                        <p class="tasks__task-name">Tarea agregada</p>
+                        <button class="button tasks__delete-task">
+                            <img src="./assets/images/borrar.svg" alt="">
+                        </button>
+                    </div>
+                    <div class="tasks__field">
+                        <p class="tasks__current-day" id="currentDay">Agregada el: 20/10/2020 a las 22:23</p>
+                        <p class="tasks__deadline" id="deadline">Quedan: 10d 21h 30m 40s</p>
+                        <button class="button tasks__completed-task">
+                            <img src="./assets/images/comprobado.svg" alt="">
+                        </button>
+                    </div>
                 </li>
             </ul>
         </main>

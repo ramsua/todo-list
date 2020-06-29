@@ -9,6 +9,8 @@
     --call-to-action: rgb(48, 79, 254);
 
     --gap: .5em;
+
+    --max-width: 650px;
 }
 
 /* Reset */
@@ -16,6 +18,7 @@
 
 body{
     margin: 0;
+    background-color: #141414;
     font-family: sans-serif;
 }
 ul {
@@ -24,4 +27,8 @@ ul {
     padding-left: 0;
     
     list-style: none;
+}
+.main-header{
+    color: var(--call-to-action);
+    text-align: center;
 }

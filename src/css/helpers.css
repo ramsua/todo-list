@@ -1,9 +1,20 @@
+/*
+Muestra un mensaje 
+si no se cumplen las 
+condiciones en el formulario
+*/
 .msg{
     margin: 0;
     padding: calc(var(--gap) * 2);
     text-transform: uppercase;
     text-align: center;
+    color: #fff;
 }
+
+/* 
+Clases que se usan por JS para 
+dar la sensación de que se presionó un botón
+*/
 .scaled{
     transition: transform .075s ease;
 }
