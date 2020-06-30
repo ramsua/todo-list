@@ -3,7 +3,6 @@ const colors = {
     yellow: formTask.yellow,
     green: formTask.green
 }
-
 /**
  * Recorre el objeto de colores
  * Si uno está checkeado, devuelve true y el color checkeado
@@ -24,13 +23,14 @@ const isColorChecked = () => {
     return false
 }
 /**
- * Retorna el color si hay un input en checked
+ * Asigna la clase CSS del color correspondiente ó
+ * Imprime el msj correspondiente en pantalla
  */
 const assignBgColor = () => {
     const params = isColorChecked()
     if (params.bool) {
-        return console.log(params.color)
+        console.log(params.color)
     } else {
-        return console.log('Se debe asignar un color de fondo');
+        console.log('Se debe asignar un color de fondo');
     }
 }
