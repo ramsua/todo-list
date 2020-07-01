@@ -12,16 +12,6 @@ const validateDate = (date) => {
 }
 
 /**
- * Al momento de presionar "submit"
- * Se crea un ID con la fecha y hora 
- * para la tarea que se va a agregar
- */
-const setIdTask = () => {
-    const t = getCurrentTime()
-    return `${t.year}${t.month}${t.date}${t.hours}${t.minutes}${t.seconds}`
-}
-
-/**
  * Obtener fecha y hora del momento de guardar la tarea
  */
 const getCurrentTime = () => {
