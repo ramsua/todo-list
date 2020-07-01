@@ -165,6 +165,10 @@ condiciones en el formulario
     text-align: center;
     color: #fff;
 }
+.no-task{
+    text-transform: uppercase;
+    text-align: center;
+}
 .tasks{
     max-width: var(--max-width);
     margin-right: auto;

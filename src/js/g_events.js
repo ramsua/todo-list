@@ -17,14 +17,14 @@ formTask.addEventListener('submit', (e) => {
     } else {
         showMsg('msg', 'Completa todos los campos')
     }
+
+    formTask.reset()
 })
 
 tasksList.addEventListener('click', (e) => {
-    if (e.target.textContent === 'Borrar') {
-        removeTask(e.target.previousSibling.textContent)
-    }
+    removeTask(e.target.dataset.id)
 })
 
 document.addEventListener('DOMContentLoaded', () => {
-    showTasks()
+    getTasks()
 })

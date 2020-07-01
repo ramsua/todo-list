@@ -34,3 +34,10 @@ const showMsg = (elem, msg) => {
         el.textContent = `Tareas`
     }, 2500);
 }
+
+const noTasks = (parentElem) => {
+    const el = document.createElement('P')
+    el.classList.add('no-task')
+    el.textContent = 'No hay tareas que mostrar'
+    parentElem.appendChild(el)
+}
