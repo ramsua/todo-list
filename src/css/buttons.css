@@ -1,15 +1,20 @@
 .button{
-    padding:var(--gap) calc(var(--gap) * 2);
+    padding:var(--gap);
 
+    background-color: red;
+    
     font-size: 100%;
-    
-    background-color: #fff;
-    
-    cursor: pointer;
-    border: none;
+    text-transform: uppercase;
+
     outline: none;
+    cursor: pointer;
+    border: 1px solid;
 }
-.button--bg-main-color{
+.button--bg-main-color{   
     background-color: var(--call-to-action);
     color: #fff;
+}
+.delete{
+    color: #fff;
+    border: 2px solid;
 }

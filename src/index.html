@@ -12,10 +12,6 @@
             <h1 class="title">Todo List</h1>
         </header>
         <main class="main-content">
-            <!-- La etiqueta FIELDSET
-               da problemas al momento de ordenar elementos con CSS,
-               por eso se usa en éste caso específico un DIV
-            -->
             <form class="form-task" id="formTask">
                 <div class="form-task__fieldset">
                     <input type="text" name="inputTask" placeholder="Agrega una tarea" class="form-task__input">
@@ -34,40 +30,14 @@
                 </div>
                 <div class="form-task__fieldset">
                     <input class="form-task__date" type="datetime-local" name="inputDate">
-                    <!-- <input class="form-task__date" type="time" name="inputTime"> -->
                 </div>
                 <div class="form-task__fieldset">
-                    <button 
-                        id="button" 
-                        class="button 
-                        button--bg-main-color
-                        scaled">
-                        Agregar
-                    </button>
+                    <button id="button" class="button button--bg-main-color">Agregar</button>
                 </div>
             </form>
             <h2 id="msg" class="msg">Tareas</h2>
-            <ul class="tasks" id="tasksList">
-                <li class="tasks__task green">
-                    <div class="tasks__field">
-                        <p class="tasks__task-name">Tarea agregada</p>
-                        <button class="button tasks__delete-task">
-                            <img src="./assets/images/borrar.svg" alt="">
-                        </button>
-                    </div>
-                    <div class="tasks__field">
-                        <p class="tasks__current-day">Agregada: 20/10/2020 a las 22:23</p>
-                        <p class="tasks__deadline">Quedan: 10d 21h 30m 40s</p>
-                        <button class="button tasks__completed-task">
-                            <img src="./assets/images/comprobado.svg" alt="">
-                        </button>
-                    </div>
-                </li>
-            </ul>
+            <ul class="tasks" id="tasksList"></ul>
         </main>
-        <!-- <footer class="main-footer">
-            <p>Profesor: Dorian Desings</p>
-        </footer> -->
         <script src="./js/scripts.min.js"></script>
     </body>
 </html>

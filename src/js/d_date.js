@@ -36,6 +36,10 @@ const getCurrentTime = () => {
         year, month, date, hours, minutes, seconds
     }
 }
+const showCurrentTime = () => {
+    let time = getCurrentTime();
+    return `Agregada: ${time.date}/${time.month}/${time.year} a las ${time.hours}:${time.minutes}`
+}
 
 /**
  * Se pasa tiempo legible 
@@ -58,10 +62,10 @@ const getRemainTime = (date) => {
  */
 const countDown = (date, elem) => {
     const timeUpdate = setInterval(() => {
-        let time = getRemainTime(date)
-        elem.textContent = `Quedan: ${time.days}d ${time.hours}h ${time.minutes}m ${time.seconds}s`
+        let time = getRemainTime(date);
         if (time.remainTime <= 1) {
             clearInterval(timeUpdate)
         }
+        elem.textContent = `Quedan: ${time.days}d ${time.hours}h ${time.minutes}m ${time.seconds}s`
     }, 1000)
 }

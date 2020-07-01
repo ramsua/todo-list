@@ -10,14 +10,3 @@ condiciones en el formulario
     text-align: center;
     color: #fff;
 }
-
-/* 
-Clases que se usan por JS para 
-dar la sensación de que se presionó un botón
-*/
-.scaled{
-    transition: transform .075s ease;
-}
-.scale-down {
-    transform: scale(.985);
-}

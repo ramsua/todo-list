@@ -7,46 +7,39 @@
     background-color: var(--main-color);
 }
 .tasks__task{
+    display: grid;
+    grid-template-columns: repeat(10,1fr);
+    grid-template-rows: repeat(2,60px);
+    gap: var(--gap);
     padding: var(--gap);
     margin-bottom: var(--gap);
 }
 .tasks__task:last-child{
     margin-bottom: 0;
 }
-
-.tasks__field{
-    display: grid;
-    grid-template-columns: repeat(10,1fr);
-    gap:var(--gap)
+.tasks__task > *:not(button) {
+    background-color: #fff;
 }
-.tasks__field:first-child{
-    margin-bottom: var(--gap);
-}
-.tasks__task-name{
+.child-one{
     grid-column: 1 / 10;
     text-transform: uppercase;
 }
-.tasks__completed-task,
-.tasks__delete-task{
+.child-two{
     grid-column: 10 / 11;
 }
-.tasks__delete-task{
+.child-tree{
+    grid-column: 1 / 7;
 }
-.tasks__current-day{
-    grid-column: 1 / 6;
+.child-four{
+    grid-column: 7 / 11;
 }
-.tasks__deadline{
-    grid-column: 6 / 10;
-}
-.tasks__current-day,
-.tasks__deadline,
-.tasks__task-name{
+.child-one,
+.child-tree,
+.child-four{
     display: flex;
     align-items: center;
     justify-content: center;
 
     margin: 0;
     height: 100%;
-
-    background-color: #fff;
 }

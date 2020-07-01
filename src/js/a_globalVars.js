@@ -1,4 +1,4 @@
 const formTask = document.getElementById('formTask');
 const tasksList = document.getElementById('tasksList');
 
-let tasksLists = []
+const fragment = document.createDocumentFragment()

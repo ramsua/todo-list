@@ -21,6 +21,11 @@ body{
     background-color: #141414;
     font-family: sans-serif;
 }
+img{
+    display: block;
+    width: 100%;
+    height: auto;
+}
 ul {
     margin-top: 0;
     margin-bottom: 0;
@@ -33,19 +38,24 @@ ul {
     text-align: center;
 }
 .button{
-    padding:var(--gap) calc(var(--gap) * 2);
+    padding:var(--gap);
 
+    background-color: red;
+    
     font-size: 100%;
-    
-    background-color: #fff;
-    
-    cursor: pointer;
-    border: none;
+    text-transform: uppercase;
+
     outline: none;
+    cursor: pointer;
+    border: 1px solid;
 }
-.button--bg-main-color{
+.button--bg-main-color{   
     background-color: var(--call-to-action);
     color: #fff;
+}
+.delete{
+    color: #fff;
+    border: 2px solid;
 }
 .colors{
     display: grid;
@@ -155,17 +165,6 @@ condiciones en el formulario
     text-align: center;
     color: #fff;
 }
-
-/* 
-Clases que se usan por JS para 
-dar la sensación de que se presionó un botón
-*/
-.scaled{
-    transition: transform .075s ease;
-}
-.scale-down {
-    transform: scale(.985);
-}
 .tasks{
     max-width: var(--max-width);
     margin-right: auto;
@@ -175,46 +174,39 @@ dar la sensación de que se presionó un botón
     background-color: var(--main-color);
 }
 .tasks__task{
+    display: grid;
+    grid-template-columns: repeat(10,1fr);
+    grid-template-rows: repeat(2,60px);
+    gap: var(--gap);
     padding: var(--gap);
     margin-bottom: var(--gap);
 }
 .tasks__task:last-child{
     margin-bottom: 0;
 }
-
-.tasks__field{
-    display: grid;
-    grid-template-columns: repeat(10,1fr);
-    gap:var(--gap)
+.tasks__task > *:not(button) {
+    background-color: #fff;
 }
-.tasks__field:first-child{
-    margin-bottom: var(--gap);
-}
-.tasks__task-name{
+.child-one{
     grid-column: 1 / 10;
     text-transform: uppercase;
 }
-.tasks__completed-task,
-.tasks__delete-task{
+.child-two{
     grid-column: 10 / 11;
 }
-.tasks__delete-task{
+.child-tree{
+    grid-column: 1 / 7;
 }
-.tasks__current-day{
-    grid-column: 1 / 6;
+.child-four{
+    grid-column: 7 / 11;
 }
-.tasks__deadline{
-    grid-column: 6 / 10;
-}
-.tasks__current-day,
-.tasks__deadline,
-.tasks__task-name{
+.child-one,
+.child-tree,
+.child-four{
     display: flex;
     align-items: center;
     justify-content: center;
 
     margin: 0;
     height: 100%;
-
-    background-color: #fff;
 }
