@@ -1,5 +1,7 @@
 /**
- * Validar campos
+ * String vacío o undefined retornan false, sino retorna true
+ * 
+ * @param {Object} fields - Recorre el objeto y retorna un booleano
  */
 const validateFields = (fields) => {
     for (const field in fields) {
@@ -24,8 +26,10 @@ const setIdTask = () => {
 }
 
 /**
- * Si falta completar algún input
- * Muestra el msj correspondiente
+ * Solo se ejecuta si los campos no están todos validados
+ * 
+ * @param {HTMLElement} elem Donde se imprimirá el mensaje
+ * @param {String} msg Mensaje a mostrar
  */
 const showMsg = (elem, msg) => {
     const el = document.getElementById(elem);
@@ -35,6 +39,11 @@ const showMsg = (elem, msg) => {
     }, 2500);
 }
 
+/**
+ * Si no hay datos en localStorage, muestra un mensaje de que no hay tareas
+ * 
+ * @param {HTMLElement} parentElem Elemento padre donde se mostraá el mensaje
+ */
 const noTasks = (parentElem) => {
     const el = document.createElement('P')
     el.classList.add('no-task')

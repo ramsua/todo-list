@@ -47,6 +47,7 @@ const getRemainTime = (date) => {
         remainTime, seconds, minutes, hours, days
     }
 }
+
 /**
  * Cuenta regresiva que se ejecuta cada segundo
  */
@@ -59,15 +60,12 @@ const countDown = (date, elem) => {
         elem.textContent = `Quedan: ${time.days}d ${time.hours}h ${time.minutes}m ${time.seconds}s`
     }, 1000)
 }
+
 const updateDate = (date, elem) => {
-
     const el = document.getElementById(elem)
-
     if (el) {
-
         const time = getRemainTime(date);
         el.textContent = `Quedan: ${time.days}d ${time.hours}h ${time.minutes}m ${time.seconds}s`
-
         countDown(date, el)
     }
 }

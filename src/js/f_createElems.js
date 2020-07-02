@@ -1,4 +1,12 @@
-
+/**
+ * Crea un elemento HTML, le asigna clases para css y agrega el texto que contendrá
+ * 
+ * @param {HTMLElement} appendParent - Elemento al que se le añadirá el elemento creado
+ * @param {HTMLElement} elem - Elemento que va ser creado
+ * @param {Array} classes - Atributos de clase
+ * @param {String} content - El contenido que contendrá el elemento
+ * @param {String} dataId - Opcional, si es un botón el elemento a crear, le asigna el valor del parámetro como data-id
+ */
 const createElem = (appendParent, elem, classes, content, dataId) => {
 
     const el = document.createElement(elem.toUpperCase())
