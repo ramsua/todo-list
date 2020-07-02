@@ -18,7 +18,7 @@ formTask.addEventListener('submit', (e) => {
     } else {
         showMsg('msg', 'Completa todos los campos')
     }
-
+    bgColor.classList.remove('red', 'yellow', 'green')
     formTask.reset()
 })
 
@@ -28,4 +28,9 @@ tasksList.addEventListener('click', (e) => {
 
 document.addEventListener('DOMContentLoaded', () => {
     getTasks()
+})
+
+bgColor.addEventListener('click', () => {
+    bgColor.classList.remove('red', 'yellow', 'green')
+    bgColor.classList.add(isColorChecked())
 })

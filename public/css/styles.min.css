@@ -61,46 +61,6 @@ ul {
     color: #fff;
     border: 2px solid;
 }
-.colors{
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    gap: var(--gap);
-    background-color: #fff;
-}
-.color{
-    margin-top: var(--gap);
-    margin-bottom: var(--gap);
-    cursor: pointer;
-    outline: 2px solid transparent;
-    transition: outline-color .15s ease;
-
-}
-.color:hover{
-    outline-color: var(--main-color);
-} 
-
-label.red{
-    margin-left: var(--gap);
-}
-label.green{
-    margin-right: var(--gap);
-}
-.color-radio{
-    display: none;
-}
-
-.red{
-    background-color: var(--red);
-    color: var(--red);
-}
-.yellow{
-    background-color: var(--yelloy);
-    color: var(--yelloy);
-}
-.green{
-    background-color: var(--green);
-    color: var(--green);
-}
 .form-task{
     display: grid;
     grid-template-columns: repeat(6,1fr);
@@ -156,22 +116,44 @@ label.green{
 .form-task .button{
     width: 100%;
 }
-/*
-Muestra un mensaje 
-si no se cumplen las 
-condiciones en el formulario
-*/
-.msg{
-    margin: 0;
-    padding: calc(var(--gap) * 2);
-    text-transform: uppercase;
-    text-align: center;
-    color: #fff;
+.colors{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: var(--gap);
 }
-.no-task{
-    color: #fff;
-    text-transform: uppercase;
-    text-align: center;
+.color{
+    margin-top: var(--gap);
+    margin-bottom: var(--gap);
+    cursor: pointer;
+    outline: 2px solid transparent;
+    transition: outline-color .15s ease;
+
+}
+.color:hover{
+    outline-color: var(--main-color);
+} 
+
+label.red{
+    margin-left: var(--gap);
+}
+label.green{
+    margin-right: var(--gap);
+}
+.color-radio{
+    display: none;
+}
+
+.red{
+    background-color: var(--red);
+    color: var(--red);
+}
+.yellow{
+    background-color: var(--yelloy);
+    color: var(--yelloy);
+}
+.green{
+    background-color: var(--green);
+    color: var(--green);
 }
 .tasks{
     margin-right: auto;
@@ -216,4 +198,21 @@ condiciones en el formulario
 
     margin: 0;
     height: 100%;
+}
+/*
+Muestra un mensaje 
+si no se cumplen las 
+condiciones en el formulario
+*/
+.msg{
+    margin: 0;
+    padding: calc(var(--gap) * 2);
+    text-transform: uppercase;
+    text-align: center;
+    color: #fff;
+}
+.no-task{
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
 }
