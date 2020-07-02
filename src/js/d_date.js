@@ -57,7 +57,10 @@ const countDown = (date, elem) => {
         if (time.remainTime <= 1) {
             clearInterval(timeUpdate)
         }
-        elem.textContent = `Quedan: ${time.days}d ${time.hours}h ${time.minutes}m ${time.seconds}s`
+        if (elem) {
+            elem.textContent = `Quedan: ${time.days}d ${time.hours}h ${time.minutes}m ${time.seconds}s`
+        }
+
     }, 1000)
 }
 
