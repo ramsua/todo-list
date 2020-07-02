@@ -5,28 +5,26 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="./css/styles.min.css?t=1593560970439">
+        <link rel="stylesheet" href="./css/styles.min.css?t=1593697200031">
     </head>
     <body>
         <header class="main-header">
             <h1 class="title">Todo List</h1>
         </header>
         <main class="main-content">
-            <form class="form-task" id="formTask">
+            <form class="form-task section" id="formTask">
                 <div class="form-task__fieldset">
                     <input type="text" name="inputTask" placeholder="Agrega una tarea" class="form-task__input">
                 </div>
-                <div class="form-task__fieldset colors">
-                    
-                    <label class="color red">
-                        <input type="radio" name="color" id="red">
-                    </label>
-                    <label class="color yellow">
-                        <input type="radio" name="color" id="yellow">
-                    </label>
-                    <label class="color green">
-                        <input type="radio" name="color" id="green">
-                    </label>
+                <div id="bgColor" class="form-task__fieldset colors">
+                    <label for="red" class="color red"></label>
+                    <input class="color-radio" type="radio" name="color" id="red">
+
+                    <label for="yellow" class="color yellow"></label>
+                    <input class="color-radio" type="radio" name="color" id="yellow">
+
+                    <label for="green" class="color green"></label>
+                    <input class="color-radio" type="radio" name="color" id="green">
                 </div>
                 <div class="form-task__fieldset">
                     <input class="form-task__date" type="datetime-local" name="inputDate">
@@ -35,9 +33,11 @@
                     <button id="button" class="button button--bg-main-color">Agregar</button>
                 </div>
             </form>
-            <h2 id="msg" class="msg">Tareas</h2>
-            <ul class="tasks" id="tasksList"></ul>
+            <div class="section">
+                <h2 id="msg" class="msg">Tareas</h2>
+                <ul class="tasks" id="tasksList"></ul>
+            </div>
         </main>
-        <script src="./js/scripts.min.js?t=1593560970439"></script>
+        <script src="./js/scripts.min.js?t=1593697200031"></script>
     </body>
 </html>

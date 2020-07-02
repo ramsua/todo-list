@@ -1,12 +1,10 @@
 /* Variables */
 :root {
-    --main-color: rgb(135, 206, 250);
+    --main-color: #651fff;
 
-    --red: rgb(255, 0, 0);
-    --green: rgb(0, 255, 0);
-    --yelloy: rgb(255, 215, 0);
-
-    --call-to-action: rgb(48, 79, 254);
+    --red: #b71c1c;
+    --green: #1b5e20;
+    --yelloy: #f57f17;
 
     --gap: .5em;
 
@@ -19,6 +17,7 @@
 body{
     margin: 0;
     background-color: #141414;
+    color: #fff;
     font-family: sans-serif;
 }
 img{
@@ -34,6 +33,11 @@ ul {
     list-style: none;
 }
 .main-header{
-    color: var(--call-to-action);
     text-align: center;
+}
+.main-content{
+    padding: 1em;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: var(--max-width);
 }

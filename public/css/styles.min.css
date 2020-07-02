@@ -1,12 +1,10 @@
 /* Variables */
 :root {
-    --main-color: rgb(135, 206, 250);
+    --main-color: #651fff;
 
-    --red: rgb(255, 0, 0);
-    --green: rgb(0, 255, 0);
-    --yelloy: rgb(255, 215, 0);
-
-    --call-to-action: rgb(48, 79, 254);
+    --red: #b71c1c;
+    --green: #1b5e20;
+    --yelloy: #f57f17;
 
     --gap: .5em;
 
@@ -19,6 +17,7 @@
 body{
     margin: 0;
     background-color: #141414;
+    color: #fff;
     font-family: sans-serif;
 }
 img{
@@ -34,13 +33,18 @@ ul {
     list-style: none;
 }
 .main-header{
-    color: var(--call-to-action);
     text-align: center;
+}
+.main-content{
+    padding: 1em;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: var(--max-width);
 }
 .button{
     padding:var(--gap);
 
-    background-color: red;
+    background-color: var(--red);
     
     font-size: 100%;
     text-transform: uppercase;
@@ -50,7 +54,7 @@ ul {
     border: 1px solid;
 }
 .button--bg-main-color{   
-    background-color: var(--call-to-action);
+    background-color: var(--main-color);
     color: #fff;
 }
 .delete{
@@ -72,7 +76,7 @@ ul {
 
 }
 .color:hover{
-    outline-color: blue;
+    outline-color: var(--main-color);
 } 
 
 label.red{
@@ -81,18 +85,21 @@ label.red{
 label.green{
     margin-right: var(--gap);
 }
-.color input{
+.color-radio{
     display: none;
 }
 
 .red{
     background-color: var(--red);
+    color: var(--red);
 }
 .yellow{
     background-color: var(--yelloy);
+    color: var(--yelloy);
 }
 .green{
     background-color: var(--green);
+    color: var(--green);
 }
 .form-task{
     display: grid;
@@ -100,10 +107,6 @@ label.green{
     grid-template-rows: 50px 1fr;
     gap: var(--gap);
 
-    max-width: var(--max-width);
-
-    margin-right: auto;
-    margin-left: auto;
     padding: var(--gap);
 
     background-color: var(--main-color);
@@ -166,11 +169,11 @@ condiciones en el formulario
     color: #fff;
 }
 .no-task{
+    color: #fff;
     text-transform: uppercase;
     text-align: center;
 }
 .tasks{
-    max-width: var(--max-width);
     margin-right: auto;
     margin-left: auto;
     padding: var(--gap);

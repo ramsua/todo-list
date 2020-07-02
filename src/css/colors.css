@@ -13,7 +13,7 @@
 
 }
 .color:hover{
-    outline-color: blue;
+    outline-color: var(--main-color);
 } 
 
 label.red{
@@ -22,16 +22,19 @@ label.red{
 label.green{
     margin-right: var(--gap);
 }
-.color input{
+.color-radio{
     display: none;
 }
 
 .red{
     background-color: var(--red);
+    color: var(--red);
 }
 .yellow{
     background-color: var(--yelloy);
+    color: var(--yelloy);
 }
 .green{
     background-color: var(--green);
+    color: var(--green);
 }

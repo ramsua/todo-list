@@ -1,7 +1,7 @@
 .button{
     padding:var(--gap);
 
-    background-color: red;
+    background-color: var(--red);
     
     font-size: 100%;
     text-transform: uppercase;
@@ -11,7 +11,7 @@
     border: 1px solid;
 }
 .button--bg-main-color{   
-    background-color: var(--call-to-action);
+    background-color: var(--main-color);
     color: #fff;
 }
 .delete{

@@ -4,10 +4,6 @@
     grid-template-rows: 50px 1fr;
     gap: var(--gap);
 
-    max-width: var(--max-width);
-
-    margin-right: auto;
-    margin-left: auto;
     padding: var(--gap);
 
     background-color: var(--main-color);
