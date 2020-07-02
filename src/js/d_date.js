@@ -32,7 +32,7 @@ const showCurrentTime = () => {
 }
 
 /**
- * Se pasa tiempo legible 
+ * Se pasa a tiempo legible 
  * lo que devuelve el Objeto Date()
  */
 const getRemainTime = (date) => {
@@ -52,10 +52,22 @@ const getRemainTime = (date) => {
  */
 const countDown = (date, elem) => {
     const timeUpdate = setInterval(() => {
-        let time = getRemainTime(date);
+        const time = getRemainTime(date);
         if (time.remainTime <= 1) {
             clearInterval(timeUpdate)
         }
         elem.textContent = `Quedan: ${time.days}d ${time.hours}h ${time.minutes}m ${time.seconds}s`
     }, 1000)
+}
+const updateDate = (date, elem) => {
+
+    const el = document.getElementById(elem)
+
+    if (el) {
+
+        const time = getRemainTime(date);
+        el.textContent = `Quedan: ${time.days}d ${time.hours}h ${time.minutes}m ${time.seconds}s`
+
+        countDown(date, el)
+    }
 }

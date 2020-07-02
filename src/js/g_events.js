@@ -8,6 +8,7 @@ formTask.addEventListener('submit', (e) => {
         date: formTask.inputDate.value
     }
 
+    countDown(task.date)
     if (validateFields(task)) {
         if (validateDate(task.date)) {
             setTasks(task)

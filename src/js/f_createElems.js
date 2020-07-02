@@ -13,8 +13,14 @@ const createElem = (appendParent, elem, classes, content, dataId) => {
         el.dataset.id = dataId
     }
 
+    if (el.nodeName === 'P' && dataId !== undefined) {
+        el.setAttribute('id', dataId)
+    }
+
+
     appendParent.appendChild(el)
 }
+
 
 /**
  * 
@@ -31,11 +37,13 @@ const createTaskElem = (tasks) => {
 
     createElem(li, 'p', ['child-tree'], `${showCurrentTime()}`)
 
-    // createElem(li, 'p', ['child-four'], ``)
+    createElem(li, 'p', ['child-four'], '', `${tasks.bgColor}${tasks.id}`)
 
     fragment.appendChild(li)
 
     tasksList.appendChild(fragment)
+
+    updateDate(tasks.date, `${tasks.bgColor}${tasks.id}`)
 
 }
 
@@ -47,8 +55,3 @@ const removeElems = () => {
         }
     });
 }
-// const remainTimeTask = document.createElement('P')
-// remainTimeTask.classList.add('child-four')
-// countDown(tasks.date, remainTimeTask)
-
-// li.appendChild(remainTimeTask)
