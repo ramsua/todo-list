@@ -7,7 +7,7 @@
  * @param {String} content - El contenido que contendrá el elemento
  * @param {String} dataId - Opcional, si es un botón el elemento a crear, le asigna el valor del parámetro como data-id
  */
-const createElem = (appendParent, elem, classes, content, dataId) => {
+const createElem = (appendParent, elem, classes, content, dataId = null) => {
 
     const el = document.createElement(elem.toUpperCase())
 
@@ -17,11 +17,11 @@ const createElem = (appendParent, elem, classes, content, dataId) => {
 
     el.textContent = content
 
-    if (el.nodeName === 'BUTTON' && dataId !== undefined) {
+    if (el.nodeName === 'BUTTON' && dataId !== null) {
         el.dataset.id = dataId
     }
 
-    if (el.nodeName === 'P' && dataId !== undefined) {
+    if (el.nodeName === 'P' && dataId !== null) {
         el.setAttribute('id', dataId)
     }
 
