@@ -12,6 +12,7 @@ formTask.addEventListener('submit', (e) => {
     if (validateFields(task)) {
         if (validateDate(task.date)) {
             setTasks(task)
+            formTask.reset()
         } else {
             showMsg('msg', 'La fecha debe ser posterior a hoy')
         }
@@ -19,7 +20,6 @@ formTask.addEventListener('submit', (e) => {
         showMsg('msg', 'Completa todos los campos')
     }
     bgColor.classList.remove('red', 'yellow', 'green')
-    formTask.reset()
 })
 
 tasksList.addEventListener('click', (e) => {
